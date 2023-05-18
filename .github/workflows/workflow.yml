@@ -18,6 +18,7 @@ jobs:
         with:
           aws-access-key-id: ${{secrets.AWS_ACCESSS_KEY_ID}}
           aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESSS_KEY}}
+          aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
           aws-region: eu-west-1
       - name: Copy files to S3
         run: aws s3 sync ./src/. s3://${{secrets.ASW_S3_BUCKET_NAME}}
