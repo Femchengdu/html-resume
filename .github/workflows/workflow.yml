@@ -13,8 +13,8 @@ jobs:
       - uses: actions/setup-node@v2
       - name: Install dependencies
         run: npm install
-      - name: Set AWS credential
-        uses: aws-actions/conn
+      - name: Set AWS credentials
+        uses: aws-actions/configure-aws-redentials@v1
         with:
           aws-access-key-id: ${{secrets.AWS_ACCESSS_KEY_ID}}
           aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESSS_KEY}}
